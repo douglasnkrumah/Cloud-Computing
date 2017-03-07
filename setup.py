@@ -7,5 +7,5 @@ setup(name='YourAppName',
       author='Your Name',
       author_email='example@example.com',
       url='https://www.python.org/community/sigs/current/distutils-sig',
-      install_requires=['Flask','flask-wft','unirest','wtforms'],
+      install_requires=['Flask','flask-wtf','unirest','wtforms'],
       )
