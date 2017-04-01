@@ -4,8 +4,8 @@ from flask import jsonify
 import os
 
 app.config['MONGO_DBNAME'] = os.environ['OPENSHIFT_APP_NAME']
-#app.config['MONGO_URI'] = os.environ['OPENSHIFT_MONGODB_DB_URL']
-app.config['MONGO_URI'] = 'mongodb://$OPENSHIFT_MONGODB_DB_HOST:$OPENSHIFT_MONGODB_DB_PORT/'
+app.config['MONGO_URI'] = os.environ['OPENSHIFT_MONGODB_DB_URL']
+#app.config['MONGO_URI'] = 'mongodb://$OPENSHIFT_MONGODB_DB_HOST:$OPENSHIFT_MONGODB_DB_PORT/'
 mongo = PyMongo(app)
 
 @app.route('/database/collections', methods=['GET'])
